@@ -1,4 +1,4 @@
-FROM webhippie/ubuntu:20.04
+FROM webhippie/ubuntu:20.10
 ENTRYPOINT [""]
 
 RUN apt-get update && \
