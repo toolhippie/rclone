@@ -1,7 +1,8 @@
-FROM webhippie/alpine:latest
+FROM webhippie/ubuntu:20.04
 ENTRYPOINT [""]
 
-RUN apk update && \
-  apk upgrade && \
-  apk add rclone rsync postgresql-client mariadb-client mongodb-tools && \
-  rm -rf /var/cache/apk/*
+RUN apt-get update && \
+  apt-get upgrade -y && \
+  apt-get install -y rclone rsync postgresql-client mariadb-client mongodb-clients && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
