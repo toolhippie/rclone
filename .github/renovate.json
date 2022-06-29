@@ -3,8 +3,10 @@
     "extends": [
         "github>webhippie/renovate:docker"
     ],
-    "packageRules": [{
-        "groupName": "rclone packages",
-        "matchDatasources": []
-    }]
+    "packageRules": [
+        {
+            "groupName": "rclone packages",
+            "matchDatasources": []
+        }
+    ]
 }
