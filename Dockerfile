@@ -1,4 +1,4 @@
-FROM webhippie/alpine:3.15
+FROM webhippie/alpine:3.16
 ENTRYPOINT [""]
 
 RUN apk update && \
