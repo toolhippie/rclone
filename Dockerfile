@@ -1,4 +1,4 @@
-FROM webhippie/alpine:3.16
+FROM ghcr.io/webhippie/alpine:3.16
 ENTRYPOINT [""]
 
 RUN apk update && \
