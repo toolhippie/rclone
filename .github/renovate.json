@@ -8,5 +8,8 @@
             "groupName": "rclone packages",
             "matchDatasources": []
         }
+    ],
+    "ignoreDeps": [
+        "docker/build-push-action"
     ]
 }
