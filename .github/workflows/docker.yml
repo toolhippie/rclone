@@ -1,7 +1,7 @@
 ---
 name: docker
 
-on:
+"on":
   push:
     branches:
       - master
@@ -21,13 +21,6 @@ jobs:
         id: source
         uses: actions/checkout@v3
 
-      - name: Detect version
-        id: version
-        run: |
-          VER=$(sed -ne "s/^.*PROTOC_GEN_DOC_VERSION=\(.*\)/\1/p;" Dockerfile)
-          echo IMAGE_TAG=${VER} >> ${GITHUB_ENV}
-          echo "Building ${VER}"
-
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v4
@@ -40,7 +33,6 @@ jobs:
           flavor: |
             latest=true
           tags: |
-            type=raw,value=${{ env.IMAGE_TAG }}
             type=schedule,pattern={{date 'YYYYMMDD'}}
             type=ref,enable=true,event=branch
           labels: |
