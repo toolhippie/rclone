@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/alpine:3.19
+FROM ghcr.io/dockhippie/alpine:3.20
 ENTRYPOINT [""]
 
 RUN apk update && \
